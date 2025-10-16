@@ -3,3 +3,4 @@ flutter_native_splash:
   ios: true
   image: assets/images/logo-new.png
   color: "#F5F3F3"
+  image_scale: 0.8 
