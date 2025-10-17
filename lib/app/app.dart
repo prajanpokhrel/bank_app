@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return ResponsiveSizer(
       builder: (context, orientation, screenType) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Siddhrtha Bank Ui Demo',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
