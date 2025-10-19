@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -6,6 +7,11 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: const Color.fromARGB(255, 163, 123, 2),
+      ),
+    );
     return Scaffold(
       body: Column(
         children: [
@@ -22,7 +28,7 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: 4.h),
+                  padding: EdgeInsets.only(top: 5.h),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
