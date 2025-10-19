@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -21,11 +22,15 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(12.0),
+                  padding: EdgeInsets.only(top: 4.h),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset("assets/images/logo-new.png", width: 200),
+                      SizedBox(width: 2.h),
+                      Icon(Icons.language_rounded),
+                      SizedBox(width: 2.h),
+                      Icon(Icons.sms),
                     ],
                   ),
                 ),
