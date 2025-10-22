@@ -43,6 +43,22 @@ class LoginScreen extends StatelessWidget {
               ],
             ),
           ),
+          Container(
+            height: 200,
+            width: 330,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5), // shadow color
+                  spreadRadius: 2, // how wide the shadow spreads
+                  blurRadius: 7, // how soft the shadow looks
+                  offset: Offset(3, 3), // x, y position of shadow
+                ),
+              ],
+              borderRadius: BorderRadius.circular(4),
+              color: Colors.white,
+            ),
+          ),
         ],
       ),
     );
