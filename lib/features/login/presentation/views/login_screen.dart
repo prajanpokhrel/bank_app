@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:siddhartha_bank_ui/common/button.dart';
 import 'package:siddhartha_bank_ui/common/textform/password_field.dart';
 import 'package:siddhartha_bank_ui/common/textform/text_form.dart';
 
@@ -100,6 +101,28 @@ class LoginScreen extends StatelessWidget {
                         text: 'Password',
 
                         prefixicons: Icon(Icons.lock, color: Colors.grey),
+                      ),
+
+                      SizedBox(height: 2.h),
+
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 2.h),
+                        child: Row(
+                          children: [
+                            Icon(Icons.check_box, color: Colors.amber),
+                            SizedBox(width: 4),
+                            Text("Rememeber Me"),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 2.h),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 2.h),
+                        child: Row(
+                          children: [
+                            CommonButton(height: 40, width: 230, text: 'Login'),
+                          ],
+                        ),
                       ),
                     ],
                   ),

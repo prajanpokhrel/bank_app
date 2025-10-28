@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:siddhartha_bank_ui/features/homepage/presentation/views/homepage.dart';
+import 'package:siddhartha_bank_ui/features/login/presentation/views/login_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -39,7 +40,7 @@ class OnboardingScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Homepage()),
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
                     );
                   },
                   child: Container(
