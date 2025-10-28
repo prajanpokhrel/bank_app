@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:siddhartha_bank_ui/common/textform/text_form.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -13,7 +14,8 @@ class LoginScreen extends StatelessWidget {
       ),
     );
     return Scaffold(
-      body: Column(
+      body: Stack(
+        clipBehavior: Clip.none,
         children: [
           Container(
             height: 140,
@@ -43,20 +45,52 @@ class LoginScreen extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            height: 200,
-            width: 330,
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.5), // shadow color
-                  spreadRadius: 2, // how wide the shadow spreads
-                  blurRadius: 7, // how soft the shadow looks
-                  offset: Offset(3, 3), // x, y position of shadow
+          Positioned(
+            top: 100,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: Container(
+                height: 300,
+                width: 330,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5), // shadow color
+                      spreadRadius: 2, // how wide the shadow spreads
+                      blurRadius: 7, // how soft the shadow looks
+                      offset: Offset(3, 3), // x, y position of shadow
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(4),
+                  color: Colors.white,
                 ),
-              ],
-              borderRadius: BorderRadius.circular(4),
-              color: Colors.white,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(top: 2.h),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Good Morning,", style: TextStyle(fontSize: 16)),
+                          SizedBox(width: 4),
+                          Text(
+                            "PRAJAN",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 2.h),
+                    TextForms(),
+                    SizedBox(height: 2.h),
+                    TextForms(),
+                  ],
+                ),
+              ),
             ),
           ),
         ],
