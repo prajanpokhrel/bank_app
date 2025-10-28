@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
               offset: Offset(0, -50),
               child: Center(
                 child: Container(
-                  height: 300,
+                  height: 350,
                   width: 330,
                   decoration: BoxDecoration(
                     boxShadow: [
@@ -119,8 +119,25 @@ class LoginScreen extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 2.h),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            CommonButton(height: 40, width: 230, text: 'Login'),
+                            CommonButton(height: 50, width: 220, text: 'Login'),
+                            SizedBox(width: 1.h),
+                            OutlinedButton(
+                              onPressed: () {},
+                              style: OutlinedButton.styleFrom(
+                                side: BorderSide(color: Colors.grey, width: 2),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                padding: EdgeInsets.all(12),
+                              ),
+                              child: Icon(
+                                size: 25,
+                                Icons.fingerprint,
+                                color: Colors.amber,
+                              ),
+                            ),
                           ],
                         ),
                       ),
