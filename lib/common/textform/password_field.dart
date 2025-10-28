@@ -1,27 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class TextForms extends StatefulWidget {
+class PasswordField extends StatefulWidget {
   final String text;
   final Widget? prefixicons;
+  final Widget? suffixIcons;
 
-  const TextForms({super.key, required this.text, this.prefixicons});
+  const PasswordField({
+    super.key,
+    required this.text,
+    this.prefixicons,
+    this.suffixIcons,
+  });
 
   @override
-  State<TextForms> createState() => _TextFormsState();
+  State<PasswordField> createState() => _PasswordFieldState();
 }
 
-class _TextFormsState extends State<TextForms> {
+class _PasswordFieldState extends State<PasswordField> {
+  bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 2.h),
       child: TextFormField(
         textInputAction: TextInputAction.next,
-
+        obscureText: _obscureText,
         decoration: InputDecoration(
           prefixIcon: widget.prefixicons,
-
+          suffixIcon: IconButton(
+            color: const Color.fromARGB(255, 243, 181, 10),
+            onPressed: () {
+              setState(() {
+                _obscureText = !_obscureText;
+              });
+            },
+            icon: Icon(
+              _obscureText
+                  ? Icons.visibility_off_outlined
+                  : Icons.visibility_outlined,
+            ),
+          ),
           contentPadding: EdgeInsets.all(10),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(2),

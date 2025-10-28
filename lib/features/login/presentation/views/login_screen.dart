@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:siddhartha_bank_ui/common/textform/password_field.dart';
 import 'package:siddhartha_bank_ui/common/textform/text_form.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -88,16 +89,16 @@ class LoginScreen extends StatelessWidget {
                       SizedBox(height: 2.h),
                       TextForms(
                         text: 'Number',
-                        obsecuretext: false,
+
                         prefixicons: Icon(
                           Icons.phone_android,
                           color: Colors.grey,
                         ),
                       ),
                       SizedBox(height: 2.h),
-                      TextForms(
+                      PasswordField(
                         text: 'Password',
-                        obsecuretext: true,
+
                         prefixicons: Icon(Icons.lock, color: Colors.grey),
                       ),
                     ],
