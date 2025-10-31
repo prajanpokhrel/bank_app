@@ -51,8 +51,8 @@ class LoginScreen extends StatelessWidget {
               offset: Offset(0, -50),
               child: Center(
                 child: Container(
-                  height: 350,
-                  width: 330,
+                  height: 380,
+                  width: 360,
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
@@ -121,7 +121,7 @@ class LoginScreen extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            CommonButton(height: 50, width: 220, text: 'Login'),
+                            CommonButton(height: 50, width: 240, text: 'Login'),
                             SizedBox(width: 1.h),
                             OutlinedButton(
                               onPressed: () {},
@@ -133,7 +133,8 @@ class LoginScreen extends StatelessWidget {
                                 padding: EdgeInsets.all(12),
                               ),
                               child: Icon(
-                                size: 25,
+                               
+                                size: 30,
                                 Icons.fingerprint,
                                 color: Colors.amber,
                               ),
@@ -141,6 +142,14 @@ class LoginScreen extends StatelessWidget {
                           ],
                         ),
                       ),
+                      SizedBox(height: 1.h,),
+                      Text("New to Siddhartha BankSmart XP?", style: TextStyle(color: const Color.fromARGB(255, 115, 114, 114)),),
+                      SizedBox(height: 1.h,),
+                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [Text("Register/Activate", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),), SizedBox(width: 1.h,), Text("or "), Text("Forgot Password?", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold))],),
+                       SizedBox(height: 1.h,),
+                      Text("Need Help?", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 101, 98, 98))),
                     ],
                   ),
                 ),
