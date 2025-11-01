@@ -5,6 +5,7 @@ import 'package:siddhartha_bank_ui/common/button.dart';
 import 'package:siddhartha_bank_ui/common/faceid/face_id.dart';
 import 'package:siddhartha_bank_ui/common/textform/password_field.dart';
 import 'package:siddhartha_bank_ui/common/textform/text_form.dart';
+import 'package:siddhartha_bank_ui/features/homepage/presentation/views/homepage.dart';
 
 class WhiteConatiner extends StatelessWidget {
   const WhiteConatiner({super.key});
@@ -85,7 +86,11 @@ class WhiteConatiner extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            CommonButton(height: 50, width: 240, text: 'Login'),
+                            GestureDetector(
+                              onTap: (){
+                                Navigator.push((context), MaterialPageRoute(builder:(context)=>Homepage()));
+                              },
+                              child: CommonButton(height: 50, width: 240, text: 'Login')),
                             SizedBox(width: 1.h),
                             OutlinedButton(
                               onPressed: () {},
@@ -109,7 +114,9 @@ class WhiteConatiner extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [Text("Register/Activate", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),), SizedBox(width: 1.h,), Text("or "), Text("Forgot Password?", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold))],),
                        SizedBox(height: 1.h,),
-                      Text("Need Help?", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 101, 98, 98))),
+                      GestureDetector(
+                        onTap: (){print("clicked");},
+                        child: Text("Need Help?", style: TextStyle(decoration: TextDecoration.underline, fontSize: 16, fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 101, 98, 98)))),
                     ],
                   ),
                 ),
