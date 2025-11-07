@@ -67,7 +67,7 @@ class Homepage extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(0, -20), // Adjust this value to move more/less
+            offset: Offset(0, -20),
             child: Column(
               children: [
                 Padding(
@@ -96,7 +96,11 @@ class Homepage extends StatelessWidget {
                     height: 100,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(6),
+                        bottomRight: Radius.circular(6),
+                        topRight: Radius.circular(6),
+                      ),
                       color: Colors.amber,
                     ),
                     child: Padding(
@@ -132,15 +136,16 @@ class Homepage extends StatelessWidget {
           ),
 
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 2.h),
+            padding: EdgeInsets.symmetric(horizontal: 1.h),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ServiceConatiner(text: "statement", icon: Icons.menu_book),
-                SizedBox(width: 1.h),
+
                 ServiceConatiner(text: " Accounts", icon: Icons.wallet),
-                SizedBox(width: 1.h),
+
                 ServiceConatiner(text: " Payments", icon: Icons.save_rounded),
-                SizedBox(width: 1.h),
+
                 ServiceConatiner(text: "Topup", icon: Icons.payment),
               ],
             ),

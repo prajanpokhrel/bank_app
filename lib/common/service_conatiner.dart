@@ -10,7 +10,7 @@ class ServiceConatiner extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 90,
-      width: 82,
+      width: 85,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(6),
         boxShadow: [
