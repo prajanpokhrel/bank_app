@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:siddhartha_bank_ui/common/editbutton/edit_button.dart';
 import 'package:siddhartha_bank_ui/common/service_conatiner.dart';
 
 class Homepage extends StatelessWidget {
@@ -76,7 +77,7 @@ class Homepage extends StatelessWidget {
                     height: 25,
                     width: 300,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(4),
+                      borderRadius: BorderRadius.circular(2),
                       color: const Color.fromARGB(255, 210, 209, 209),
                     ),
                     child: Row(
@@ -140,13 +141,67 @@ class Homepage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                ServiceConatiner(text: "statement", icon: Icons.menu_book),
+                GestureDetector(
+                  onTap: () {},
+                  child: ServiceConatiner(
+                    text: "Statement",
+                    imagePath: "assets/icons/statement.png",
+                  ),
+                ),
 
-                ServiceConatiner(text: " Accounts", icon: Icons.wallet),
+                ServiceConatiner(
+                  text: " Accounts",
+                  imagePath: "assets/icons/wallet.png",
+                ),
 
-                ServiceConatiner(text: " Payments", icon: Icons.save_rounded),
+                ServiceConatiner(
+                  text: " Payments",
+                  imagePath: "assets/icons/payment.png",
+                ),
 
-                ServiceConatiner(text: "Topup", icon: Icons.payment),
+                ServiceConatiner(
+                  text: "Topup",
+                  imagePath: "assets/icons/topup.png",
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 1.h),
+          EditButton(),
+          Padding(
+            padding: EdgeInsets.only(right: 23.h),
+            child: Text(
+              "Service Request",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 1.h),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                GestureDetector(
+                  onTap: () {},
+                  child: ServiceConatiner(
+                    text: "Statement",
+                    imagePath: "assets/icons/statement.png",
+                  ),
+                ),
+
+                ServiceConatiner(
+                  text: " Accounts",
+                  imagePath: "assets/icons/wallet.png",
+                ),
+
+                ServiceConatiner(
+                  text: " Payments",
+                  imagePath: "assets/icons/payment.png",
+                ),
+
+                ServiceConatiner(
+                  text: "Topup",
+                  imagePath: "assets/icons/topup.png",
+                ),
               ],
             ),
           ),

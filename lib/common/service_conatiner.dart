@@ -3,13 +3,17 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 
 class ServiceConatiner extends StatelessWidget {
   final String text;
-  final IconData icon;
-  const ServiceConatiner({super.key, required this.text, required this.icon});
+  final String imagePath;
+  const ServiceConatiner({
+    super.key,
+    required this.text,
+    required this.imagePath,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 90,
+      height: 95,
       width: 85,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(6),
@@ -26,7 +30,15 @@ class ServiceConatiner extends StatelessWidget {
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 2.h),
-        child: Column(children: [Icon(icon), Text(text)]),
+        child: Column(
+          children: [
+            Image.asset(width: 4.h, imagePath),
+            Padding(
+              padding: const EdgeInsets.all(2),
+              child: Text(text, style: TextStyle(fontSize: 14)),
+            ),
+          ],
+        ),
       ),
     );
   }
