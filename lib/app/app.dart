@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:siddhartha_bank_ui/features/homepage/presentation/views/homepage.dart';
-import 'package:siddhartha_bank_ui/features/login/presentation/views/login_screen.dart';
 import 'package:siddhartha_bank_ui/features/onboarding/presentation/views/onboarding_screen.dart';
 
 class MyApp extends StatelessWidget {
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           ),
-          home: Homepage(),
+          home: OnboardingScreen(),
         );
       },
     );

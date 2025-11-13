@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:siddhartha_bank_ui/features/homepage/presentation/views/homepage.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
+
 import 'package:siddhartha_bank_ui/features/login/presentation/views/login_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -12,9 +13,9 @@ class OnboardingScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            margin: EdgeInsets.only(right: 0, left: 30, top: 30),
+            margin: EdgeInsets.only(right: 0, left: 2.h, top: 30),
             height: 700,
-            width: 300,
+            width: 90.w,
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
@@ -33,7 +34,7 @@ class OnboardingScreen extends StatelessWidget {
                 Image.asset(
                   "assets/images/banner.png",
                   height: 600,
-                  width: 280,
+                  width: 60.h,
                 ),
                 SizedBox(height: 20),
                 GestureDetector(
