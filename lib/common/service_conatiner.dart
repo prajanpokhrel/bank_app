@@ -3,18 +3,20 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 
 class ServiceConatiner extends StatelessWidget {
   final String text;
+  final String? subtext;
   final String imagePath;
   const ServiceConatiner({
     super.key,
     required this.text,
     required this.imagePath,
+    this.subtext,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 95,
-      width: 85,
+      width: 88,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(6),
         boxShadow: [
@@ -29,13 +31,30 @@ class ServiceConatiner extends StatelessWidget {
         color: Colors.white,
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 2.h),
+        padding: EdgeInsets.symmetric(vertical: 1.h, horizontal: 2),
         child: Column(
           children: [
-            Image.asset(width: 4.h, imagePath),
+            Image.asset(width: 3.h, imagePath),
             Padding(
-              padding: const EdgeInsets.all(2),
-              child: Text(text, style: TextStyle(fontSize: 14)),
+              padding: EdgeInsets.symmetric(horizontal: 2, vertical: 1.h),
+              child: Column(
+                children: [
+                  Text(
+                    text,
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                  ),
+                  if (subtext != null) ...[
+                    Text(
+                      subtext!,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ],
+              ),
             ),
           ],
         ),

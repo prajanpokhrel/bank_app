@@ -8,7 +8,7 @@ class EditButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(left: 24.h),
-      height: 50,
+      height: 46,
       width: 160,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
