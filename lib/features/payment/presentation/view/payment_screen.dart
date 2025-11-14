@@ -47,7 +47,7 @@ class PaymentScreen extends StatelessWidget {
                   child: TextFormField(
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.symmetric(
-                        vertical: 12,
+                        vertical: 14,
                         horizontal: 12,
                       ),
                       fillColor: Colors.white,
@@ -66,6 +66,72 @@ class PaymentScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),
+            ),
+          ),
+
+          // payments containers
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 2.h),
+            child: Transform.translate(
+              offset: Offset(0, -20),
+              child: Row(
+                children: [
+                  Container(
+                    width: 20.6.h,
+                    height: 6.h,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: Colors.amber,
+                    ),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(Icons.history_edu, color: Colors.white),
+                        ),
+
+                        Text(
+                          "Payment History",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 1.h),
+                  Container(
+                    width: 20.6.h,
+                    height: 6.h,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: Colors.amber,
+                    ),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(
+                            Icons.savings_rounded,
+                            color: Colors.white,
+                          ),
+                        ),
+
+                        Text(
+                          "Saved/Scheduled",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
