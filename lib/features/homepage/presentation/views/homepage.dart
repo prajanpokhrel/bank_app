@@ -297,8 +297,8 @@ class Homepage extends StatelessWidget {
             onTap: () => Navigator.pushNamed(context, "/products"),
           ),
           BottomBarItem(
-            icon: Icons.more_horiz,
-            label: "More",
+            icon: Icons.person,
+            label: "Profile",
             onTap: () => Navigator.pushNamed(context, "/more"),
           ),
         ],

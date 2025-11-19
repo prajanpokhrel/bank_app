@@ -43,7 +43,7 @@ class LoginScreen extends StatelessWidget {
             onTap: () => Navigator.pushNamed(context, "/payments"),
           ),
           BottomBarItem(
-            icon: Icons.shopping_bag,
+            icon: Icons.production_quantity_limits_outlined,
             label: "Products",
             onTap: () => Navigator.pushNamed(context, "/products"),
           ),
