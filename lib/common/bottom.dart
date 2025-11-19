@@ -31,7 +31,6 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar> {
         // Navigator.push(context, MaterialPageRoute(builder: (_) => CalendarPage()));
         break;
       case 3:
-       
         break;
     }
   }
@@ -57,7 +56,11 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar> {
             const SizedBox(width: 10),
             _buildNavItem(Icons.currency_rupee_rounded, "payments", 1),
             const SizedBox(width: 40), // Space for FAB
-            _buildNavItem(Icons.production_quantity_limits_rounded, "Products", 2),
+            _buildNavItem(
+              Icons.production_quantity_limits_rounded,
+              "Products",
+              2,
+            ),
             const SizedBox(width: 10),
             _buildNavItem(Icons.more_horiz, "More", 3),
           ],
