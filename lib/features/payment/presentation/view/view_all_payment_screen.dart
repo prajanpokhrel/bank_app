@@ -50,6 +50,68 @@ class ViewAllPaymentScreen extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(height: 2.h),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 1.h),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ServiceConatiner(
+                  text: "Load Wallet",
+                  imagePath: "assets/icons/wallet.png",
+                  width: 3.h,
+                ),
+                ServiceConatiner(
+                  text: "Bill",
+                  subtext: "Payments",
+                  imagePath: "assets/icons/bill.png",
+                  width: 3.h,
+                ),
+                ServiceConatiner(
+                  text: "Topup",
+                  imagePath: "assets/icons/topup.png",
+                  width: 3.h,
+                ),
+                ServiceConatiner(
+                  text: "Data",
+                  subtext: "Package",
+                  imagePath: "assets/icons/data.png",
+                  width: 3.h,
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 2.h),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 1.h),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ServiceConatiner(
+                  text: "Load Wallet",
+                  imagePath: "assets/icons/wallet.png",
+                  width: 3.h,
+                ),
+                ServiceConatiner(
+                  text: "Bill",
+                  subtext: "Payments",
+                  imagePath: "assets/icons/bill.png",
+                  width: 3.h,
+                ),
+                ServiceConatiner(
+                  text: "Topup",
+                  imagePath: "assets/icons/topup.png",
+                  width: 3.h,
+                ),
+                ServiceConatiner(
+                  text: "Data",
+                  subtext: "Package",
+                  imagePath: "assets/icons/data.png",
+                  width: 3.h,
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
