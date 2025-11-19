@@ -111,6 +111,20 @@ class PaymentScreen extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(height: 1.h),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 1.5.h),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                ServiceConatiner(
+                  text: "Ncell Topup",
+                  imagePath: "assets/images/ncel.png",
+                  width: 8.h,
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
