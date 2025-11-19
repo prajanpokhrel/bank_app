@@ -154,6 +154,7 @@ class Homepage extends StatelessWidget {
                     child: ServiceConatiner(
                       text: "Statement",
                       imagePath: "assets/icons/statement.png",
+                      width: 3.h,
                     ),
                   ),
 
@@ -161,18 +162,21 @@ class Homepage extends StatelessWidget {
                     text: " My",
                     subtext: "Accounts",
                     imagePath: "assets/icons/wallet.png",
+                    width: 3.h,
                   ),
 
                   ServiceConatiner(
                     text: "Saved",
                     subtext: "Payments",
                     imagePath: "assets/icons/payment.png",
+                    width: 3.h,
                   ),
 
                   ServiceConatiner(
                     text: "Mobile",
                     subtext: "Topup",
                     imagePath: "assets/icons/topup.png",
+                    width: 3.h,
                   ),
                 ],
               ),
@@ -197,6 +201,7 @@ class Homepage extends StatelessWidget {
                     child: ServiceConatiner(
                       text: "EasyBank",
                       imagePath: "assets/icons/bank-building.png",
+                      width: 3.h,
                     ),
                   ),
 
@@ -204,18 +209,21 @@ class Homepage extends StatelessWidget {
                     text: " Transaction",
                     subtext: "Dispute",
                     imagePath: "assets/icons/transaction.png",
+                    width: 3.h,
                   ),
 
                   ServiceConatiner(
                     text: "Fixed",
                     subtext: 'Deposit',
                     imagePath: "assets/icons/business.png",
+                    width: 3.h,
                   ),
 
                   ServiceConatiner(
                     text: "New Credit",
                     subtext: "Card",
                     imagePath: "assets/icons/credit-card.png",
+                    width: 3.h,
                   ),
                 ],
               ),
@@ -233,6 +241,7 @@ class Homepage extends StatelessWidget {
                       subtext: "Rewards",
 
                       imagePath: "assets/icons/trophy.png",
+                      width: 3.h,
                     ),
                   ),
 
@@ -240,18 +249,21 @@ class Homepage extends StatelessWidget {
                     text: "Debit Card",
                     subtext: "Replacement",
                     imagePath: "assets/icons/donation.png",
+                    width: 3.h,
                   ),
 
                   ServiceConatiner(
                     text: "Debit Cards",
                     subtext: "Renew",
                     imagePath: "assets/icons/money.png",
+                    width: 3.h,
                   ),
 
                   ServiceConatiner(
                     text: "Cheque",
                     subtext: "Books",
                     imagePath: "assets/icons/cheque-line.png",
+                    width: 3.h,
                   ),
                 ],
               ),

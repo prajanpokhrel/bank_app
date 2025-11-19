@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:siddhartha_bank_ui/common/payment_buttons/payment_buttons.dart';
+import 'package:siddhartha_bank_ui/common/service_conatiner.dart';
 
 class PaymentScreen extends StatelessWidget {
   const PaymentScreen({super.key});
@@ -69,70 +71,44 @@ class PaymentScreen extends StatelessWidget {
               ),
             ),
           ),
-
           // payments containers
+          PaymentButtons(),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 2.h),
-            child: Transform.translate(
-              offset: Offset(0, -20),
-              child: Row(
-                children: [
-                  Container(
-                    width: 20.6.h,
-                    height: 6.h,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(3),
-                      color: Colors.amber,
-                    ),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Icon(Icons.history_edu, color: Colors.white),
-                        ),
-
-                        Text(
-                          "Payment History",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 1.h),
-                  Container(
-                    width: 20.6.h,
-                    height: 6.h,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(3),
-                      color: Colors.amber,
-                    ),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Icon(
-                            Icons.savings_rounded,
-                            color: Colors.white,
-                          ),
-                        ),
-
-                        Text(
-                          "Saved/Scheduled",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+            padding: EdgeInsets.only(right: 23.h, top: 1.h),
+            child: Text(
+              'Recent Payments',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ),
+          SizedBox(height: 2.h),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 1.h),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ServiceConatiner(
+                  text: "NT Prepaid",
+                  subtext: "Topup",
+                  imagePath: "assets/images/ntc.png",
+                  width: 3.h,
+                ),
+                ServiceConatiner(
+                  text: "KHALTI",
+                  imagePath: "assets/images/khalti.png",
+                  width: 7.h,
+                ),
+                ServiceConatiner(
+                  text: "ESEWA",
+                  imagePath: "assets/images/esewa.png",
+                  width: 3.h,
+                ),
+                ServiceConatiner(
+                  text: "NT CDMA",
+                  subtext: "Prepaid",
+                  imagePath: "assets/images/ntc.png",
+                  width: 3.h,
+                ),
+              ],
             ),
           ),
         ],

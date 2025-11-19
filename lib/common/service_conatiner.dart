@@ -5,11 +5,13 @@ class ServiceConatiner extends StatelessWidget {
   final String text;
   final String? subtext;
   final String imagePath;
+  final double width;
   const ServiceConatiner({
     super.key,
     required this.text,
     required this.imagePath,
     this.subtext,
+    required this.width,
   });
 
   @override
@@ -34,7 +36,7 @@ class ServiceConatiner extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 1.h, horizontal: 2),
         child: Column(
           children: [
-            Image.asset(width: 3.h, imagePath),
+            Image.asset(width: width, imagePath),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 2, vertical: 1.h),
               child: Column(
