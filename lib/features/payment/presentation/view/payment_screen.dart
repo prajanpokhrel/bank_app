@@ -92,7 +92,10 @@ class PaymentScreen extends StatelessWidget {
                     ),
                   ),
                   // payments containers
-                  PaymentButtons(),
+                  PaymentButtons(
+                    text: 'Payment History',
+                    secondPaymentText: 'Saved/Scheduled',
+                  ),
                   Padding(
                     padding: EdgeInsets.only(right: 23.h, top: 1.h),
                     child: Text(

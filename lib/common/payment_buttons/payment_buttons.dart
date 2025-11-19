@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class PaymentButtons extends StatelessWidget {
-  const PaymentButtons({super.key});
+  final String text;
+  final String secondPaymentText;
+  const PaymentButtons({
+    super.key,
+    required this.text,
+    required this.secondPaymentText,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +33,7 @@ class PaymentButtons extends StatelessWidget {
                   ),
 
                   Text(
-                    "Payment History",
+                    text,
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
@@ -53,7 +59,7 @@ class PaymentButtons extends StatelessWidget {
                   ),
 
                   Text(
-                    "Saved/Scheduled",
+                    secondPaymentText,
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
