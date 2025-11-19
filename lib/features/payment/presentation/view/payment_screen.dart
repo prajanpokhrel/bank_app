@@ -298,7 +298,30 @@ class PaymentScreen extends StatelessWidget {
         shape: const CircleBorder(),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: AnimatedBottomBar(),
+      bottomNavigationBar: AnimatedBottomBar(
+        items: [
+          BottomBarItem(
+            icon: Icons.home,
+            label: "Home",
+            onTap: () => Navigator.pushNamed(context, "/homepage"),
+          ),
+          BottomBarItem(
+            icon: Icons.currency_rupee_sharp,
+            label: "Payments",
+            onTap: () => Navigator.pushNamed(context, "/payment"),
+          ),
+          BottomBarItem(
+            icon: Icons.mobile_screen_share,
+            label: "Send Money",
+            onTap: () => Navigator.pushNamed(context, "/products"),
+          ),
+          BottomBarItem(
+            icon: Icons.person,
+            label: "Profile",
+            onTap: () => Navigator.pushNamed(context, "/more"),
+          ),
+        ],
+      ),
     );
   }
 }

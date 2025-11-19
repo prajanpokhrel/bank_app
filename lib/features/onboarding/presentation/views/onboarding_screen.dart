@@ -39,7 +39,7 @@ class OnboardingScreen extends StatelessWidget {
                 SizedBox(height: 20),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => LoginScreen()),
                     );

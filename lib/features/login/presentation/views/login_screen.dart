@@ -18,20 +18,11 @@ class LoginScreen extends StatelessWidget {
     );
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            TopContainer(),
-            WhiteConatiner(),
-          ],
-        ),
+        child: Column(children: [TopContainer(), WhiteConatiner()]),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          
-        },
-        child: const Icon(
-          
-          color:Colors.black, Icons.qr_code),
+        onPressed: () {},
+        child: const Icon(color: Colors.black, Icons.qr_code),
         backgroundColor: Colors.amber,
         shape: const CircleBorder(), //
       ),
@@ -39,9 +30,30 @@ class LoginScreen extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
       // BottomAppBar with a notch
-      bottomNavigationBar: AnimatedBottomBar(),
+      bottomNavigationBar: AnimatedBottomBar(
+        items: [
+          BottomBarItem(
+            icon: Icons.home,
+            label: "Home",
+            onTap: () => Navigator.pushNamed(context, "/home"),
+          ),
+          BottomBarItem(
+            icon: Icons.payment,
+            label: "Payments",
+            onTap: () => Navigator.pushNamed(context, "/payments"),
+          ),
+          BottomBarItem(
+            icon: Icons.shopping_bag,
+            label: "Products",
+            onTap: () => Navigator.pushNamed(context, "/products"),
+          ),
+          BottomBarItem(
+            icon: Icons.more_horiz,
+            label: "More",
+            onTap: () => Navigator.pushNamed(context, "/more"),
+          ),
+        ],
+      ),
     );
-    
-    
   }
 }

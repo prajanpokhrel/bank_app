@@ -279,7 +279,30 @@ class Homepage extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       // BottomAppBar with a notch
-      bottomNavigationBar: AnimatedBottomBar(),
+      bottomNavigationBar: AnimatedBottomBar(
+        items: [
+          BottomBarItem(
+            icon: Icons.home,
+            label: "Home",
+            onTap: () => Navigator.pushNamed(context, "/"),
+          ),
+          BottomBarItem(
+            icon: Icons.currency_rupee_sharp,
+            label: "Payments",
+            onTap: () => Navigator.pushNamed(context, "/payment"),
+          ),
+          BottomBarItem(
+            icon: Icons.mobile_screen_share,
+            label: "Send Money",
+            onTap: () => Navigator.pushNamed(context, "/products"),
+          ),
+          BottomBarItem(
+            icon: Icons.more_horiz,
+            label: "More",
+            onTap: () => Navigator.pushNamed(context, "/more"),
+          ),
+        ],
+      ),
     );
   }
 }

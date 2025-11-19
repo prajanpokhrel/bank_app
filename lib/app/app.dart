@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:siddhartha_bank_ui/features/homepage/presentation/views/homepage.dart';
-import 'package:siddhartha_bank_ui/features/onboarding/presentation/views/onboarding_screen.dart';
-import 'package:siddhartha_bank_ui/features/payment/presentation/view/payment_screen.dart';
+import 'package:siddhartha_bank_ui/constant/routes/routes.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -18,8 +16,9 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           ),
-          // home: Homepage(),
-          home: PaymentScreen(),
+          // home: OnboardingScreen(),
+          initialRoute: AppRoutes.onboardscreen,
+          routes: AppRoutes.routes(),
         );
       },
     );

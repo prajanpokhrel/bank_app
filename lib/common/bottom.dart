@@ -1,38 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:siddhartha_bank_ui/features/homepage/presentation/views/homepage.dart';
 
 class AnimatedBottomBar extends StatefulWidget {
-  const AnimatedBottomBar({super.key});
+  final List<BottomBarItem> items;
+  final int initialIndex;
+
+  const AnimatedBottomBar({
+    super.key,
+    required this.items,
+    this.initialIndex = 0,
+  });
 
   @override
   State<AnimatedBottomBar> createState() => _AnimatedBottomBarState();
 }
 
 class _AnimatedBottomBarState extends State<AnimatedBottomBar> {
-  int _selectedIndex = 0;
+  late int _selectedIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedIndex = widget.initialIndex;
+  }
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
 
-    //  Add your navigation logic here
-    switch (index) {
-      case 0:
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => Homepage()),
-        );
-        break;
-      case 1:
-        Text("hello");
-        break;
-      case 2:
-        // Navigator.push(context, MaterialPageRoute(builder: (_) => CalendarPage()));
-        break;
-      case 3:
-        break;
-    }
+    widget.items[index].onTap?.call();
   }
 
   @override
@@ -51,19 +47,10 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar> {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            _buildNavItem(Icons.home, "Home", 0),
-            const SizedBox(width: 10),
-            _buildNavItem(Icons.currency_rupee_rounded, "payments", 1),
-            const SizedBox(width: 40), // Space for FAB
-            _buildNavItem(
-              Icons.production_quantity_limits_rounded,
-              "Products",
-              2,
-            ),
-            const SizedBox(width: 10),
-            _buildNavItem(Icons.more_horiz, "More", 3),
-          ],
+          children: List.generate(widget.items.length, (index) {
+            final item = widget.items[index];
+            return _buildNavItem(item.icon, item.label, index);
+          }),
         ),
       ),
     );
@@ -108,4 +95,12 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar> {
       ),
     );
   }
+}
+
+class BottomBarItem {
+  final IconData icon;
+  final String label;
+  final VoidCallback? onTap;
+
+  BottomBarItem({required this.icon, required this.label, this.onTap});
 }
