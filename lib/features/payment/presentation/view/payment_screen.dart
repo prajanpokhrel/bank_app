@@ -3,6 +3,8 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:siddhartha_bank_ui/common/bottom.dart';
 import 'package:siddhartha_bank_ui/common/payment_buttons/payment_buttons.dart';
 import 'package:siddhartha_bank_ui/common/service_conatiner.dart';
+import 'package:siddhartha_bank_ui/features/homepage/presentation/views/homepage.dart';
+import 'package:siddhartha_bank_ui/features/payment/presentation/view/view_all_payment_screen.dart';
 
 class PaymentScreen extends StatelessWidget {
   const PaymentScreen({super.key});
@@ -161,11 +163,21 @@ class PaymentScreen extends StatelessWidget {
                           ),
                         ),
                         Spacer(),
-                        Text(
-                          "View All",
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ViewAllPaymentScreen(),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            "View All",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                         SizedBox(width: 1.h),
@@ -225,36 +237,7 @@ class PaymentScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 1.h),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        ServiceConatiner(
-                          text: "Load Wallet",
-                          imagePath: "assets/icons/wallet.png",
-                          width: 3.h,
-                        ),
-                        ServiceConatiner(
-                          text: "Bill",
-                          subtext: "Payments",
-                          imagePath: "assets/icons/bill.png",
-                          width: 3.h,
-                        ),
-                        ServiceConatiner(
-                          text: "Topup",
-                          imagePath: "assets/icons/topup.png",
-                          width: 3.h,
-                        ),
-                        ServiceConatiner(
-                          text: "Data",
-                          subtext: "Package",
-                          imagePath: "assets/icons/data.png",
-                          width: 3.h,
-                        ),
-                      ],
-                    ),
-                  ),
+                  SizedBox(height: 2.h),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 1.h),
                     child: Row(
