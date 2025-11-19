@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:siddhartha_bank_ui/constant/routes/routes.dart';
+import 'package:siddhartha_bank_ui/features/sendmoney/presentation/view/send_money.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -16,9 +17,9 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           ),
-          // home: OnboardingScreen(),
-          initialRoute: AppRoutes.homepage,
-          routes: AppRoutes.routes(),
+          home: SendMoney(),
+          // initialRoute: AppRoutes.homepage,
+          // routes: AppRoutes.routes(),
         );
       },
     );
