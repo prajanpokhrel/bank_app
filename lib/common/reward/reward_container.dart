@@ -10,6 +10,14 @@ class RewardContainer extends StatelessWidget {
       height: 18.h,
       width: 21.h,
       decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.15),
+            blurRadius: 25,
+            spreadRadius: 1,
+            offset: Offset(0, 12),
+          ),
+        ],
         borderRadius: BorderRadius.circular(4),
         color: Colors.white,
       ),

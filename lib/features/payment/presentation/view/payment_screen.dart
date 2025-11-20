@@ -304,7 +304,7 @@ class PaymentScreen extends StatelessWidget {
           BottomBarItem(
             icon: Icons.person,
             label: "Profile",
-            onTap: () => Navigator.pushNamed(context, "/more"),
+            onTap: () => Navigator.pushNamed(context, "/profile"),
           ),
         ],
       ),
