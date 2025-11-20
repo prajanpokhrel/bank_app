@@ -126,7 +126,7 @@ class SendMoney extends StatelessWidget {
           BottomBarItem(
             icon: Icons.home,
             label: "Home",
-            onTap: () => Navigator.pushNamed(context, "/"),
+            onTap: () => Navigator.pushNamed(context, "/homepage"),
           ),
           BottomBarItem(
             icon: Icons.currency_rupee_sharp,

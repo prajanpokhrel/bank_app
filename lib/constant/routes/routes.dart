@@ -3,6 +3,7 @@ import 'package:siddhartha_bank_ui/features/homepage/presentation/views/homepage
 import 'package:siddhartha_bank_ui/features/login/presentation/views/login_screen.dart';
 import 'package:siddhartha_bank_ui/features/onboarding/presentation/views/onboarding_screen.dart';
 import 'package:siddhartha_bank_ui/features/payment/presentation/view/payment_screen.dart';
+import 'package:siddhartha_bank_ui/features/sendmoney/presentation/view/send_money.dart';
 
 class AppRoutes {
   // define name of routes
@@ -10,6 +11,7 @@ class AppRoutes {
   static const String onboardscreen = '/onboardscreen';
   static const String payment = '/payment';
   static const String loginscreen = '/loginscreen';
+  static const String sendmoney = '/sendmoney';
 
   // routes map
   static Map<String, WidgetBuilder> routes() {
@@ -18,6 +20,7 @@ class AppRoutes {
       onboardscreen: (context) => const OnboardingScreen(),
       payment: (context) => const PaymentScreen(),
       loginscreen: (context) => const LoginScreen(),
+      sendmoney: (context) => const SendMoney(),
     };
   }
 }

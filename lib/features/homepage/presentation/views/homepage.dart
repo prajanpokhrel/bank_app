@@ -294,7 +294,7 @@ class Homepage extends StatelessWidget {
           BottomBarItem(
             icon: Icons.mobile_screen_share,
             label: "Send Money",
-            onTap: () => Navigator.pushNamed(context, "/products"),
+            onTap: () => Navigator.pushNamed(context, "/sendmoney"),
           ),
           BottomBarItem(
             icon: Icons.person,
