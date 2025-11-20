@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:siddhartha_bank_ui/common/reward/reward_container.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -20,7 +21,7 @@ class ProfileScreen extends StatelessWidget {
               color: Colors.amber,
             ),
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 3.h, vertical: 5.h),
+              padding: EdgeInsets.symmetric(horizontal: 2.h, vertical: 5.h),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -28,48 +29,78 @@ class ProfileScreen extends StatelessWidget {
                     "My Profile",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 1.h),
                   Row(
                     children: [
                       Container(
-                        height: 5.h,
-                        width: 18.h,
+                        width: 60,
+                        height: 60,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                          color: Colors.white,
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 1.h),
-                          child: Row(
-                            children: [
-                              Text("37"),
-                              SizedBox(width: 0.5.h),
-                              Text("Points"),
-                            ],
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage('assets/images/babu.png'),
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
-                      SizedBox(width: 3.h),
-                      Container(
-                        height: 5.h,
-                        width: 18.h,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                          color: Colors.white,
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 1.h),
-                          child: Row(
+                      SizedBox(width: 2.h),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "BABU",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Row(
                             children: [
-                              Text("N/A"),
-                              SizedBox(width: 0.5.h),
-                              Text("Points"),
+                              Image.asset(
+                                "assets/images/mobile.png",
+                                width: 2.h,
+                              ),
+                              SizedBox(width: 1.h),
+                              Text("9858857588"),
                             ],
                           ),
-                        ),
+                          SizedBox(height: 1.h),
+                          Container(
+                            width: 11.h,
+                            height: 2.5.h,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(2),
+                              color: Colors.black,
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 5),
+                              child: Text(
+                                "FINANCIAL",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
+                ],
+              ),
+            ),
+          ),
+          // rewards
+          Transform.translate(
+            offset: Offset(0, -40),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 1.h),
+              child: Row(
+                children: [
+                  RewardContainer(),
+                  SizedBox(width: 2.h),
+                  RewardContainer(),
                 ],
               ),
             ),
